@@ -71,5 +71,47 @@ export const MOVIES = [
       likes:	812,
       dislikes:	101,
       posterindex: 0
-	}
+  },
+    {
+      title:	'Office Space',
+      iscore:	7.8,
+      rating:	'R',
+      runtime:	89,
+      released:	new Date('1999', '02', '19'),
+      country:	'USA',
+      posters:	['img/officespace1.jpg'],
+      imdb:		'http://www.imdb.com/title/tt0151804/',
+      website:	'https://en.wikipedia.org/wiki/Office_Space',
+      likes:	950,
+      dislikes:	80,
+      posterindex: 0
+	},
+  {
+    title:	'A Clockwork Orange',
+    iscore:	8.3,
+    rating:	'R',
+    runtime:	136,
+    released:	new Date('1972', '02', '02'),
+    country:	'USA',
+    posters:	['img/clockworkorange.jpg', 'img/clockworkorange2.jpg'],
+    imdb:		'http://www.imdb.com/title/tt0066921/',
+    website:	'https://en.wikipedia.org/wiki/A_Clockwork_Orange_(film)',
+    likes:	1050,
+    dislikes:	70,
+    posterindex: 0
+  },
+  {
+    title:	'Cell 211',
+    iscore:	7.7,
+    rating:	'N/A',
+    runtime:	113,
+    released:	new Date('2009', '11', '06'),
+    country:	'Spain',
+    posters:	['img/cell211.jpg', 'img/cell2112.jpg'],
+    imdb:		'http://www.imdb.com/title/tt1242422/',
+    website:	'https://en.wikipedia.org/wiki/Cell_211',
+    likes:	999,
+    dislikes:	71,
+    posterindex: 0
+  }
 ]

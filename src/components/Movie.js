@@ -54,7 +54,7 @@ class Movie extends Component {
     return (
       <div className="card" style={{ display: "inline-block", 'margin': '1rem' }}>
         <RatingCircle iscore={iscore} />
-        <img className="card-img-top" style={{cursor: 'pointer'}} src={posters[posterindex]} alt="Movie poster" onClick={this.handlePosterClick} />
+        <img className="card-img-top" style={{cursor: 'pointer', width: '500px', height: '750px'}} src={posters[posterindex]} alt="Movie poster" onClick={this.handlePosterClick} />
         <div className="card-body">
           <div className="d-flex justify-content-between">
             <h5 className="card-title">{title} ({country})</h5>
