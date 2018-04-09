@@ -1,5 +1,5 @@
 export const OWNER = 'Dmitry'
-export const TITLE = `${OWNER}'s Top 5 Movies`
+export const TITLE = `IMDB + ${OWNER}'s Top 8 Movies`
 export const GITHUB = 'https://github.com/dmitrygalperin/project3'
 export const MOVIES = [
     {

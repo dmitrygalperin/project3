@@ -11,11 +11,11 @@ class App extends Component {
       <div className="container">
         <h1>{TITLE}</h1>
         {MOVIES.map((movie, index) => <Movie key={index} movie={movie} />)}
-        <h5>
-          <a href={GITHUB} className="btn btn-lg btn-warning">
+        <div className="footer text-center mb-3">
+          <a href={GITHUB} className="btn btn-lg btn-light">
   			    <i class="fa fa-lg fa-github" aria-hidden="true"></i> {OWNER}'s Github
     		  </a>
-        </h5>
+        </div>
       </div>
     )
   }

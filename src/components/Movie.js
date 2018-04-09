@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
+import RatingCircle from './RatingCircle'
+import ButtonGroup from './ButtonGroup'
+
 class Movie extends Component {
 
   state = this.props.movie
@@ -48,23 +51,9 @@ class Movie extends Component {
       iscore
     } = this.state
 
-    const btnStyle = {'borderRadius': '40px'}
-    const ratingStyle = {
-      borderRadius: '2rem',
-      width: '4rem',
-      height: '4rem',
-      backgroundColor: '#30cca0',
-      position: 'absolute',
-      top: '2rem',
-      right: '1rem'
-    }
-
     return (
       <div className="card" style={{ display: "inline-block", 'margin': '1rem' }}>
-        <div className="d-flex justify-content-center align-items-center text-white" style={ratingStyle}>
-          <i className="fa fa-star mr-1" aria-hidden="true"></i>
-          {iscore}
-        </div>
+        <RatingCircle iscore={iscore} />
         <img className="card-img-top" style={{cursor: 'pointer'}} src={posters[posterindex]} alt="Movie poster" onClick={this.handlePosterClick} />
         <div className="card-body">
           <div className="d-flex justify-content-between">
@@ -78,14 +67,7 @@ class Movie extends Component {
           <p>
             Websites: {createLink(imdb, 'IMDB')} | {createLink(website, 'Website')}
           </p>
-          <div className="float-right mb-3">
-            <button className="btn btn-success mr-1" style={btnStyle} onClick={() => { handleThumbs('likes') }}>
-              <i className="fa fa-thumbs-up mr-1" aria-hidden="true"></i>{likes}
-            </button>
-            <button className="btn btn-danger" style={btnStyle} onClick={() => { handleThumbs('dislikes') }}>
-              <i className="fa fa-thumbs-down mr-1" aria-hidden="true"></i>{dislikes}
-            </button>
-          </div>
+          <ButtonGroup likes={likes} dislikes={dislikes} handleThumbs={handleThumbs} />
         </div>
       </div>
     );
