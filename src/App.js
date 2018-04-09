@@ -13,7 +13,8 @@ class App extends Component {
         {MOVIES.map((movie, index) => <Movie key={index} movie={movie} />)}
         <div className="footer text-center mb-3">
           <a href={GITHUB} className="btn btn-lg btn-light">
-  			    <i class="fa fa-lg fa-github" aria-hidden="true"></i> {OWNER}'s Github
+  			    <i class="fa fa-lg fa-github" aria-hidden="true"></i>
+            <span>{`${OWNER}'s Github`}</span>
     		  </a>
         </div>
       </div>
