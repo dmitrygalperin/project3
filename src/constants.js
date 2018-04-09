@@ -1,3 +1,6 @@
+export const OWNER = 'Dmitry'
+export const TITLE = `${OWNER}'s Top 5 Movies`
+export const GITHUB = 'https://github.com/dmitrygalperin/project3'
 export const MOVIES = [
     {
       title:	'The Shawshank Redemption',

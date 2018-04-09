@@ -24,6 +24,13 @@ class Movie extends Component {
     this.setState({ [name]: this.state[name] + 1 })
   }
 
+  handlePosterClick = () => {
+    const { posterindex, posters } = this.state
+    this.setState({
+       posterindex: posterindex === posters.length-1 ? 0 : posterindex+1
+    })
+  }
+
   render() {
     const { minutesToHours, formatDate, createLink, handleThumbs, } = this
     const {
@@ -38,13 +45,27 @@ class Movie extends Component {
       website,
       likes,
       dislikes,
+      iscore
     } = this.state
 
     const btnStyle = {'borderRadius': '40px'}
+    const ratingStyle = {
+      borderRadius: '2rem',
+      width: '4rem',
+      height: '4rem',
+      backgroundColor: '#30cca0',
+      position: 'absolute',
+      top: '2rem',
+      right: '1rem'
+    }
 
     return (
       <div className="card" style={{ display: "inline-block", 'margin': '1rem' }}>
-        <img className="card-img-top" src={posters[posterindex]} alt="Movie poster" />
+        <div className="d-flex justify-content-center align-items-center text-white" style={ratingStyle}>
+          <i className="fa fa-star mr-1" aria-hidden="true"></i>
+          {iscore}
+        </div>
+        <img className="card-img-top" style={{cursor: 'pointer'}} src={posters[posterindex]} alt="Movie poster" onClick={this.handlePosterClick} />
         <div className="card-body">
           <div className="d-flex justify-content-between">
             <h5 className="card-title">{title} ({country})</h5>
