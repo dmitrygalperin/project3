@@ -79,7 +79,7 @@ export const MOVIES = [
       runtime:	89,
       released:	new Date('1999', '02', '19'),
       country:	'USA',
-      posters:	['img/officespace1.jpg'],
+      posters:	['img/officespace1.jpg', 'img/officespace2.jpg'],
       imdb:		'http://www.imdb.com/title/tt0151804/',
       website:	'https://en.wikipedia.org/wiki/Office_Space',
       likes:	950,
